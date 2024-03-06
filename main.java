@@ -4,7 +4,7 @@ import UserPackage.User;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Main {
+public class main {
     public static void main(String[] args){
         // Taking user input and creating a user
         Scanner scan = new Scanner(System.in);
