@@ -1,4 +1,5 @@
 import TaskPackage.Task;
+import Test.Test;
 import UserPackage.User;
 
 import java.text.DecimalFormat;
@@ -6,6 +7,8 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args){
+        Test test = new Test();
+        test.main();
         // Taking user input and creating a user
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your username: ");
@@ -25,16 +28,16 @@ public class main {
         System.out.println("Welcome " + user.getFullName() + "!");
         printUserInfo(user);
 
-        // Creating task for a specific user   
+        // Creating task for a specific user
         System.out.println("Would you like to create a task? (y/n)");
         char answer = scan.next().charAt(0);
         if (answer == 'y'){
             System.out.println("Creating task...");
             System.out.print("please enter your task name:");
             String name= scan.next();
-            Task task1 = user.createTask(name);
+           // Task task1 = user.createTask(name);
             DecimalFormat df = new DecimalFormat("##.00");
-            System.out.println(task1.name + " duration: " + df.format(task1.getDuration()));
+      //      System.out.println(task1.name + " duration: " + df.format(task1.getDuration()));
         }
 
         // Changing username and password with setter methods
